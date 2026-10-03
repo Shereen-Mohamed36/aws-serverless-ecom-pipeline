@@ -10,19 +10,23 @@ This project is built from scratch with a heavy focus on **AWS cloud services** 
 <img width="2081" height="1732" alt="aws project final arc" src="https://github.com/user-attachments/assets/3b4d8c67-b590-45fe-a7c6-c3a6ab36ca56" />
 
 ---
-### Detailed Flow :
+### Detailed Flow Breakdown:
+
 1. **Cloud Ingestion & Real-Time Layer:**
-   - **Python Data Generator & FastAPI:** Generates and serves simulated e-commerce events locally.
-   - **ngrok:** Bridges local environments to the cloud securely via tunneling.
-   - **AWS Lambda:** Captures incoming payloads serverlessly and writes them straight into the **Amazon S3 Raw Zone**.
+   - **Python Data Generator & FastAPI** $\rightarrow$ Generates and serves simulated e-commerce events locally.
+   - **ngrok** $\rightarrow$ Bridges local environments to the cloud securely via tunneling.
+   - **AWS Lambda** $\rightarrow$ Captures incoming payloads serverlessly and writes them straight into the **Amazon S3 Raw Zone**.
+
 2. **Cloud Storage & Medallion Architecture (Amazon S3):**
-   - **Raw Zone:** Stores initial immutable ingested files.
-   - **Processed/Curated Zone:** Holds clean, optimized Parquet datasets.
+   - **Raw Zone** $\rightarrow$ Stores initial immutable ingested files.
+   - **Processed/Curated Zone** $\rightarrow$ Holds clean, optimized Parquet datasets.
+
 3. **Transformation Layer (PySpark):**
-   - Processes and models relational data into a clean **Star Schema**.
+   - **PySpark ETL** $\rightarrow$ Processes and models relational data into a clean **Star Schema**.
+
 4. **AWS Analytics Stack:**
-   - **AWS Glue Crawler:** Automatically discovers schemas and populates the **AWS Glue Data Catalog**.
-   - **Amazon Athena:** Executes fast, serverless SQL queries on top of the S3 curated data.
+   - **AWS Glue Crawler** $\rightarrow$ Automatically discovers schemas and populates the **AWS Glue Data Catalog**.
+   - **Amazon Athena** $\rightarrow$ Executes fast, serverless SQL queries on top of the S3 curated data.
 
 ---
 
