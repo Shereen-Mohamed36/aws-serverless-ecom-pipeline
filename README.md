@@ -1,4 +1,4 @@
-# AWS End-to-End E-Commerce Data Engineering Pipeline
+# AWS E-Commerce Data Engineering Pipeline
 
 ## Project Overview
 This project is built from scratch with a heavy focus on **AWS cloud services** to design a complete, production-ready data pipeline. It handles real-time data ingestion via custom API endpoints, processes distributed data using PySpark, stores information across structured cloud storage zones, and serves fast serverless analytics directly on AWS.
