@@ -10,7 +10,7 @@ This project is built from scratch with a heavy focus on **AWS cloud services** 
 <img width="2081" height="1732" alt="aws project final arc" src="https://github.com/user-attachments/assets/3b4d8c67-b590-45fe-a7c6-c3a6ab36ca56" />
 
 ---
-### Detailed Flow Breakdown:
+### Detailed Flow:
 
 1. **Cloud Ingestion & Real-Time Layer:**
    - **Python Data Generator & FastAPI** $\rightarrow$ Generates and serves simulated e-commerce events locally.
@@ -64,3 +64,21 @@ The relational data was processed via PySpark and structured into a dimensional 
 
 ## SQL Analytics & Insights (Amazon Athena)
 Advanced SQL capabilities (such as `LAG()` window functions and `DENSE_RANK()`) are utilized to extract key business insights including revenue by category, MoM growth trends, top spenders, and shipping delivery performance.
+
+---
+## 📂 Repository Structure
+```text
+aws-serverless-ecom-pipeline/
+│
+├── api/
+│   └── ordering_api.py         # FastAPI application for real-time event streaming
+├── aws/
+│   ├── lambda/
+│   │   └── lambda_function.py  # AWS Lambda function for serverless ingestion
+│   └── glue/
+│       └── Ecommerce_transformation.ipynb # PySpark notebook for transformations & Star Schema
+├── data_generator/
+│   └── generate_data.py        # data generator script
+├── docs/                       #  documentation 
+├── README.md                   
+└── sql_analytics           # sql queries to extract insights
